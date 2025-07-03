@@ -13,3 +13,4 @@ function solution(num) {
     
     return count === 500 ? -1 : count ;
 }
+
