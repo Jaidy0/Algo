@@ -1,0 +1,10 @@
+-- 코드를 작성해주세요
+# SELECT * 
+# FROM ECOLI_DATA;
+
+# 현 대장균의 유전형질을 2진수 변환했을 때, 부모의 형질을 모두 가지고 있는지 체크하면 된다. 
+SELECT a.ID, a.GENOTYPE, b.GENOTYPE AS PARENT_GENOTYPE
+FROM ECOLI_DATA a, ECOLI_DATA b
+WHERE a.PARENT_ID = b.ID AND a.PARENT_ID IS NOT NULL AND a.GENOTYPE & b.GENOTYPE = b.GENOTYPE
+ORDER BY a.ID;
+
